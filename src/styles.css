@@ -1,0 +1,10 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+.example-button-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.input-full-width {
+  width: 100%;
+}

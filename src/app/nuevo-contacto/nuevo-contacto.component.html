@@ -1,0 +1,25 @@
+<div class="example-button-row">
+<h3>Nuevo contacto</h3>
+<button md-mini-fab mdTooltip="Volver" (click)="goBack()"><md-icon>arrow_back</md-icon></button>
+</div>
+
+<form>
+  <md-input-container class="input-full-width">
+    <input mdInput placeholder="Nombre competo" [(ngModel)]="contacto.name" name="name" required>
+  </md-input-container>
+
+  <table class="example-full-width" cellspacing="0">
+    <tr>
+        <td>
+            <md-input-container class="input-full-width">
+                <input mdInput placeholder="Teléfono" required [(ngModel)]="contacto.phone" name="telefono">
+            </md-input-container>
+        </td> 
+        <td>
+             <md-checkbox class="input-full-width" [(ngModel)]="contacto.enabled" name="enabled" required>Activo</md-checkbox> 
+        </td>         
+    </tr>
+  </table>
+  <button md-raised-button (click)="guardar()">Guardar</button>
+
+</form>

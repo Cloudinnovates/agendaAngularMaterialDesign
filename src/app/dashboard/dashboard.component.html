@@ -1,0 +1,18 @@
+<div class="example-button-row">
+<h3>Listado de contactos</h3>
+<button md-mini-fab mdTooltip="Nuevo contacto" routerLink="/nuevo"><md-icon>add</md-icon></button>
+</div>
+
+<md-list>
+  <h3 md-subheader>Contactos</h3>
+  <md-list-item *ngFor="let contacto of contactos" >   
+    <h4 md-line>{{contacto.name}}</h4>
+    <p md-line> {{contacto.phone}} </p>
+    <div class="example-button-row">
+    <button md-mini-fab [routerLink]="['/editar', contacto.id]"><md-icon>edit</md-icon></button>
+
+    <button md-raised-button (click)="call(contacto)">Llamar</button>
+    <button md-button md-primary (click)="borrar(contacto)">Borrar</button>
+    </div>
+  </md-list-item>
+</md-list>
